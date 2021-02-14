@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端で跳ね返るボール</title>
+</head>
+
+<body>
+    <canvas>not work...</canvas>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script>
+let x = 0;
+let speed = 5;
+
+function setup(){
+    createCanvas(600, 400);  
+}
+
+function draw(){
+    background(0);
+    ellipse(x, height/2,50,50);
+    x += speed;
+
+    if (x > width) {
+        speed = -5;
+    }
+    if (x < 0) {
+        speed = 5;
+    }
+}
+</script>
+</html>
